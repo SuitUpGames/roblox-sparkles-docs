@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[6841],{63891:s=>{s.exports=JSON.parse('{"sourceUrl":"https://github.com/SuitUpGames/roblox-sparkles/blob/main","baseUrl":"/SuitUpGames/roblox-sparkles/","classOrder":[],"apiCategories":[]}')}}]);
