@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[7162],{44216:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"Furniture","desc":"Author: Max P\\nProject: roblox-sparkles\\n\\nDescription: Key/pair table of all furniture (stuff that can be placed) in game","source":{"line":9,"path":"src/Shared/Modules/Data/Furniture.lua"}}')}}]);
