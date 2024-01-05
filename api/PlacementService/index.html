@@ -10,8 +10,8 @@ Handles placing of props and provides methods for getting shop floor matrices fo
 Project: roblox-sparkles
 
 Handles placing of props and provides methods for getting shop floor matrices for pathfinding"><link data-rh="true" rel="canonical" href="https://github.com/roblox-sparkles-docs/api/PlacementService"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/PlacementService" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/PlacementService" hreflang="x-default"><link rel="stylesheet" href="/roblox-sparkles-docs/assets/css/styles.19a5646f.css">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.5cc3c658.js" as="script">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.ff870937.js" as="script">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.4c228e05.js" as="script">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.00979eff.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -75,7 +75,15 @@ Handles placing of props and provides methods for getting shop floor matrices fo
 <p>i, j representing matrix[i][j]</p>
 </span></span></div><div>
 <p>Get matrix coordinates of a position relative to a shop's floor</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="LookForProducts"><code style="text-decoration:none">LookForProducts</code><a href="#LookForProducts" class="hash-link" aria-label="Direct link to LookForProducts" title="Direct link to LookForProducts">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L374"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">LookForProducts</code><code>(</code><div class="inset_uKQm"><div><code>shoppingList<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetShelfData"><code style="text-decoration:none">GetShelfData</code><a href="#GetShelfData" class="hash-link" aria-label="Direct link to GetShelfData" title="Direct link to GetShelfData">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L372"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">GetShelfData</code><code>(</code><div class="inset_uKQm"><div><code>floorId<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The floor ID to retrieve a specific shelf data</p>
+</span></span></div><div><code>shelfId<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+<p>The shelf (Replica) id to retrieve shelf data for</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">table?</code><span class="inlineDescription_G7Er">-- <span>
+<p>Returns a table of the shelf data from the prop class if it exists, and nil if not</p>
+</span></span></div><div>
+<p>Returns the shelf data from the <a href="/roblox-sparkles-docs/api/ShopFloor">ShopFloor</a> class of a specific floor</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="LookForProducts"><code style="text-decoration:none">LookForProducts</code><a href="#LookForProducts" class="hash-link" aria-label="Direct link to LookForProducts" title="Direct link to LookForProducts">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L396"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">LookForProducts</code><code>(</code><div class="inset_uKQm"><div><code>shoppingList<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>Key/pair table of items to search stores for (Eg. {Eggs=1,Milk=2,Bread=3})</p>
 </span></span></div><div><code>searchOrigin<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>(Optional) The position to consider when eliminating store choices (Eg. All stores within X studs of Y position)</p>
@@ -85,15 +93,15 @@ Handles placing of props and provides methods for getting shop floor matrices fo
 <p>Returns a table that contains all of the stores, and nil if no stores are found</p>
 </span></span></div><div>
 <p>Returns an array of stores that stock the item in question</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetStockedProducts"><code style="text-decoration:none">GetStockedProducts</code><a href="#GetStockedProducts" class="hash-link" aria-label="Direct link to GetStockedProducts" title="Direct link to GetStockedProducts">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L451"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">GetStockedProducts</code><code>(</code><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetStockedProducts"><code style="text-decoration:none">GetStockedProducts</code><a href="#GetStockedProducts" class="hash-link" aria-label="Direct link to GetStockedProducts" title="Direct link to GetStockedProducts">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L467"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">GetStockedProducts</code><code>(</code><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>Returns an array (Key/pair) of all currently stocked market items in-game</p>
 </span></span></div><div>
 <p>Returns an array of the current stock of items across the entire market</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PlaceStarterProps"><code style="text-decoration:none">PlaceStarterProps</code><a href="#PlaceStarterProps" class="hash-link" aria-label="Direct link to PlaceStarterProps" title="Direct link to PlaceStarterProps">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L503"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">PlaceStarterProps</code><code>(</code><div class="inset_uKQm"><div><code>floorId<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PlaceStarterProps"><code style="text-decoration:none">PlaceStarterProps</code><a href="#PlaceStarterProps" class="hash-link" aria-label="Direct link to PlaceStarterProps" title="Direct link to PlaceStarterProps">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L519"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">PlaceStarterProps</code><code>(</code><div class="inset_uKQm"><div><code>floorId<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>the floor ID</p>
 </span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Place starter floor props</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="AssignFloorToPlayer"><code style="text-decoration:none">AssignFloorToPlayer</code><a href="#AssignFloorToPlayer" class="hash-link" aria-label="Direct link to AssignFloorToPlayer" title="Direct link to AssignFloorToPlayer">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L531"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">AssignFloorToPlayer</code><code>(</code><div class="inset_uKQm"><div><code>Player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="AssignFloorToPlayer"><code style="text-decoration:none">AssignFloorToPlayer</code><a href="#AssignFloorToPlayer" class="hash-link" aria-label="Direct link to AssignFloorToPlayer" title="Direct link to AssignFloorToPlayer">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L547"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">AssignFloorToPlayer</code><code>(</code><div class="inset_uKQm"><div><code>Player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The player to assign ownership of the floor part to</p>
 </span></span></div><div><code>floorID<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>(Optional) The ID of the floor to assign to the player. If floorID is nil, a random available floor will be assigned</p>
@@ -101,9 +109,9 @@ Handles placing of props and provides methods for getting shop floor matrices fo
 <p>Returns a promise that resolves with the selected floor ID (string) if a floor is assigned to the player, and rejects if a floor cannot be assigned to a player</p>
 </span></span></div><div>
 <p>Assign an existing floor object to the player in question</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="KnitInit"><code style="text-decoration:none">KnitInit</code><a href="#KnitInit" class="hash-link" aria-label="Direct link to KnitInit" title="Direct link to KnitInit">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L585"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">KnitInit</code><code>(</code><code>) → </code><code class="blue_P4bS">nil</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="KnitInit"><code style="text-decoration:none">KnitInit</code><a href="#KnitInit" class="hash-link" aria-label="Direct link to KnitInit" title="Direct link to KnitInit">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L601"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">KnitInit</code><code>(</code><code>) → </code><code class="blue_P4bS">nil</code></div><div>
 <p>Initializes PlacementService</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="KnitStart"><code style="text-decoration:none">KnitStart</code><a href="#KnitStart" class="hash-link" aria-label="Direct link to KnitStart" title="Direct link to KnitStart">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L608"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">KnitStart</code><code>(</code><code>) → </code><code class="blue_P4bS">nil</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="KnitStart"><code style="text-decoration:none">KnitStart</code><a href="#KnitStart" class="hash-link" aria-label="Direct link to KnitStart" title="Direct link to KnitStart">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/PlacementService.lua#L624"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>PlacementService<!-- -->:</code><code class="green_DgR4">KnitStart</code><code>(</code><code>) → </code><code class="blue_P4bS">nil</code></div><div>
 <p>Start PlacementService</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
@@ -358,6 +366,33 @@ Handles placing of props and provides methods for getting shop floor matrices fo
             }
         },
         {
+            &quot;name&quot;: &quot;GetShelfData&quot;,
+            &quot;desc&quot;: &quot;Returns the shelf data from the [ShopFloor] class of a specific floor&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;floorId&quot;,
+                    &quot;desc&quot;: &quot;The floor ID to retrieve a specific shelf data&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;shelfId&quot;,
+                    &quot;desc&quot;: &quot;The shelf (Replica) id to retrieve shelf data for&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Returns a table of the shelf data from the prop class if it exists, and nil if not&quot;,
+                    &quot;lua_type&quot;: &quot;table?&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 372,
+                &quot;path&quot;: &quot;src/Server/Services/Game/PlacementService.lua&quot;
+            }
+        },
+        {
             &quot;name&quot;: &quot;LookForProducts&quot;,
             &quot;desc&quot;: &quot;Returns an array of stores that stock the item in question&quot;,
             &quot;params&quot;: [
@@ -385,7 +420,7 @@ Handles placing of props and provides methods for getting shop floor matrices fo
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 374,
+                &quot;line&quot;: 396,
                 &quot;path&quot;: &quot;src/Server/Services/Game/PlacementService.lua&quot;
             }
         },
@@ -401,7 +436,7 @@ Handles placing of props and provides methods for getting shop floor matrices fo
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 451,
+                &quot;line&quot;: 467,
                 &quot;path&quot;: &quot;src/Server/Services/Game/PlacementService.lua&quot;
             }
         },
@@ -424,7 +459,7 @@ Handles placing of props and provides methods for getting shop floor matrices fo
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 481,
+                &quot;line&quot;: 497,
                 &quot;path&quot;: &quot;src/Server/Services/Game/PlacementService.lua&quot;
             }
         },
@@ -441,7 +476,7 @@ Handles placing of props and provides methods for getting shop floor matrices fo
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 503,
+                &quot;line&quot;: 519,
                 &quot;path&quot;: &quot;src/Server/Services/Game/PlacementService.lua&quot;
             }
         },
@@ -468,7 +503,7 @@ Handles placing of props and provides methods for getting shop floor matrices fo
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 531,
+                &quot;line&quot;: 547,
                 &quot;path&quot;: &quot;src/Server/Services/Game/PlacementService.lua&quot;
             }
         },
@@ -484,7 +519,7 @@ Handles placing of props and provides methods for getting shop floor matrices fo
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 585,
+                &quot;line&quot;: 601,
                 &quot;path&quot;: &quot;src/Server/Services/Game/PlacementService.lua&quot;
             }
         },
@@ -500,7 +535,7 @@ Handles placing of props and provides methods for getting shop floor matrices fo
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 608,
+                &quot;line&quot;: 624,
                 &quot;path&quot;: &quot;src/Server/Services/Game/PlacementService.lua&quot;
             }
         }
@@ -526,8 +561,8 @@ Handles placing of props and provides methods for getting shop floor matrices fo
         &quot;line&quot;: 10,
         &quot;path&quot;: &quot;src/Server/Services/Game/PlacementService.lua&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#NPC_SEARCH_RANGE" class="table-of-contents__link toc-highlight">NPC_SEARCH_RANGE</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#AssignFloorToPlayer" class="table-of-contents__link toc-highlight">:AssignFloorToPlayer</a></li><li><a href="#EquipWand" class="table-of-contents__link toc-highlight">:EquipWand</a></li><li><a href="#GenerateBoundingBox" class="table-of-contents__link toc-highlight">:GenerateBoundingBox</a></li><li><a href="#GetMatrix" class="table-of-contents__link toc-highlight">:GetMatrix</a></li><li><a href="#GetMatrixCoordinate" class="table-of-contents__link toc-highlight">:GetMatrixCoordinate</a></li><li><a href="#GetProps" class="table-of-contents__link toc-highlight">:GetProps</a></li><li><a href="#GetStockedProducts" class="table-of-contents__link toc-highlight">:GetStockedProducts</a></li><li><a href="#KnitInit" class="table-of-contents__link toc-highlight">:KnitInit</a></li><li><a href="#KnitStart" class="table-of-contents__link toc-highlight">:KnitStart</a></li><li><a href="#LookForProducts" class="table-of-contents__link toc-highlight">:LookForProducts</a></li><li><a href="#PlaceModel" class="table-of-contents__link toc-highlight">:PlaceModel</a></li><li><a href="#PlaceStarterProps" class="table-of-contents__link toc-highlight">:PlaceStarterProps</a></li><li><a href="#RemoveModel" class="table-of-contents__link toc-highlight">:RemoveModel</a></li><li><a href="#StockShelf" class="table-of-contents__link toc-highlight">:StockShelf</a></li><li><a href="#UnequipWand" class="table-of-contents__link toc-highlight">:UnequipWand</a></li><li><a href="#roundUp" class="table-of-contents__link toc-highlight">.roundUp</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">examples</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://suitup.games/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Suit Up Games<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Suit Up Games. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/roblox-sparkles-docs/assets/js/runtime~main.5cc3c658.js"></script>
-<script src="/roblox-sparkles-docs/assets/js/main.ff870937.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#NPC_SEARCH_RANGE" class="table-of-contents__link toc-highlight">NPC_SEARCH_RANGE</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#AssignFloorToPlayer" class="table-of-contents__link toc-highlight">:AssignFloorToPlayer</a></li><li><a href="#EquipWand" class="table-of-contents__link toc-highlight">:EquipWand</a></li><li><a href="#GenerateBoundingBox" class="table-of-contents__link toc-highlight">:GenerateBoundingBox</a></li><li><a href="#GetMatrix" class="table-of-contents__link toc-highlight">:GetMatrix</a></li><li><a href="#GetMatrixCoordinate" class="table-of-contents__link toc-highlight">:GetMatrixCoordinate</a></li><li><a href="#GetProps" class="table-of-contents__link toc-highlight">:GetProps</a></li><li><a href="#GetShelfData" class="table-of-contents__link toc-highlight">:GetShelfData</a></li><li><a href="#GetStockedProducts" class="table-of-contents__link toc-highlight">:GetStockedProducts</a></li><li><a href="#KnitInit" class="table-of-contents__link toc-highlight">:KnitInit</a></li><li><a href="#KnitStart" class="table-of-contents__link toc-highlight">:KnitStart</a></li><li><a href="#LookForProducts" class="table-of-contents__link toc-highlight">:LookForProducts</a></li><li><a href="#PlaceModel" class="table-of-contents__link toc-highlight">:PlaceModel</a></li><li><a href="#PlaceStarterProps" class="table-of-contents__link toc-highlight">:PlaceStarterProps</a></li><li><a href="#RemoveModel" class="table-of-contents__link toc-highlight">:RemoveModel</a></li><li><a href="#StockShelf" class="table-of-contents__link toc-highlight">:StockShelf</a></li><li><a href="#UnequipWand" class="table-of-contents__link toc-highlight">:UnequipWand</a></li><li><a href="#roundUp" class="table-of-contents__link toc-highlight">.roundUp</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">examples</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://suitup.games/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Suit Up Games<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Suit Up Games. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/roblox-sparkles-docs/assets/js/runtime~main.4c228e05.js"></script>
+<script src="/roblox-sparkles-docs/assets/js/main.00979eff.js"></script>
 </body>
 </html>
