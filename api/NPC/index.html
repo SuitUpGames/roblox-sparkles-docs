@@ -20,8 +20,8 @@ Description: NPC server class
 A note on replication,
 NPCs are not rendered on the server
 NPCs have their paths played back via iterating and waiting the relevant travel distance between the last successfully reported waypoint + the new waypoint"><link data-rh="true" rel="canonical" href="https://github.com/roblox-sparkles-docs/api/NPC"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/NPC" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/NPC" hreflang="x-default"><link rel="stylesheet" href="/roblox-sparkles-docs/assets/css/styles.19a5646f.css">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.b7421c4e.js" as="script">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.01ccece9.js" as="script">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.325a1901.js" as="script">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.78c71684.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -49,11 +49,11 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
 <p>How much the flap speed should be adjusted (Number >= 1 = increase in flap speed, number &#x3C;= 1 = decrease in flap speed) when the NPC is moving</p>
 </div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="DISABLED_HUMANOID_STATES"><code style="text-decoration:none">DISABLED_HUMANOID_STATES</code><a href="#DISABLED_HUMANOID_STATES" class="hash-link" aria-label="Direct link to DISABLED_HUMANOID_STATES" title="Direct link to DISABLED_HUMANOID_STATES">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Client/Controllers/Game/NPCs/NPC.lua#L98"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->.<!-- -->DISABLED_HUMANOID_STATES<!-- -->:<!-- --> </code> <code class="blue_P4bS">table</code></div><div>
 <p>Key/pair table (Eg. {FallingDown=true}) of humanoid states that should be disabled by default (To help performance)</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PATHFINDING_MAX_ATTEMPTS"><code style="text-decoration:none">PATHFINDING_MAX_ATTEMPTS</code><a href="#PATHFINDING_MAX_ATTEMPTS" class="hash-link" aria-label="Direct link to PATHFINDING_MAX_ATTEMPTS" title="Direct link to PATHFINDING_MAX_ATTEMPTS">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L60"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->.<!-- -->PATHFINDING_MAX_ATTEMPTS<!-- -->:<!-- --> </code> <code class="blue_P4bS">number</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PATHFINDING_MAX_ATTEMPTS"><code style="text-decoration:none">PATHFINDING_MAX_ATTEMPTS</code><a href="#PATHFINDING_MAX_ATTEMPTS" class="hash-link" aria-label="Direct link to PATHFINDING_MAX_ATTEMPTS" title="Direct link to PATHFINDING_MAX_ATTEMPTS">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L46"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->.<!-- -->PATHFINDING_MAX_ATTEMPTS<!-- -->:<!-- --> </code> <code class="blue_P4bS">number</code></div><div>
 <p>How many times the <a href="/roblox-sparkles-docs/api/NPC">NPC</a> class (server) will attempt to compute a path before rejecting the promise created by <a href="/roblox-sparkles-docs/api/NPC#AssignWorldPath">NPC.AssignWorldPath</a></p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PATHFINDING_REATTEMPT_DELAY"><code style="text-decoration:none">PATHFINDING_REATTEMPT_DELAY</code><a href="#PATHFINDING_REATTEMPT_DELAY" class="hash-link" aria-label="Direct link to PATHFINDING_REATTEMPT_DELAY" title="Direct link to PATHFINDING_REATTEMPT_DELAY">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L67"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->.<!-- -->PATHFINDING_REATTEMPT_DELAY<!-- -->:<!-- --> </code> <code class="blue_P4bS">number</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PATHFINDING_REATTEMPT_DELAY"><code style="text-decoration:none">PATHFINDING_REATTEMPT_DELAY</code><a href="#PATHFINDING_REATTEMPT_DELAY" class="hash-link" aria-label="Direct link to PATHFINDING_REATTEMPT_DELAY" title="Direct link to PATHFINDING_REATTEMPT_DELAY">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L53"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->.<!-- -->PATHFINDING_REATTEMPT_DELAY<!-- -->:<!-- --> </code> <code class="blue_P4bS">number</code></div><div>
 <p>How long to wait before re-attempting to build a path after the last path build attempt failed</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="NPC_PATH_COSTS"><code style="text-decoration:none">NPC_PATH_COSTS</code><a href="#NPC_PATH_COSTS" class="hash-link" aria-label="Direct link to NPC_PATH_COSTS" title="Direct link to NPC_PATH_COSTS">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L75"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->.<!-- -->NPC_PATH_COSTS<!-- -->:<!-- --> </code> <code class="blue_P4bS">table</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="NPC_PATH_COSTS"><code style="text-decoration:none">NPC_PATH_COSTS</code><a href="#NPC_PATH_COSTS" class="hash-link" aria-label="Direct link to NPC_PATH_COSTS" title="Direct link to NPC_PATH_COSTS">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L61"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->.<!-- -->NPC_PATH_COSTS<!-- -->:<!-- --> </code> <code class="blue_P4bS">table</code></div><div>
 <p>
   Key/pair table (Eg. {StoreFurniture=math.huge}) of pathfinding costs for all NPCs
   See here for more info: <a href="https://create.roblox.com/docs/characters/pathfinding#working-with-regions" target="_blank">https://create.roblox.com/docs/characters/pathfinding#working-with-regions</a>
@@ -64,15 +64,7 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
 <p>Returns a promise that resolves with the NPC class if successfully generated, and rejects if not</p>
 </span></span></div><div>
 <p>Create a new NPC class</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="AssignWorldPath"><code style="text-decoration:none">AssignWorldPath</code><a href="#AssignWorldPath" class="hash-link" aria-label="Direct link to AssignWorldPath" title="Direct link to AssignWorldPath">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L138"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->.</code><code class="green_DgR4">AssignWorldPath</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><span><code>[</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/roblox-sparkles-docs/api/NPC">NPC</a></code><code>]</code></span><code>,</code><span class="inlineDescription_G7Er">-- <span>
-<p>The NPC class</p>
-</span></span></div><div><code>targetPoint<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
-<p>The target point the NPC should navigate to</p>
-</span></span></div></div><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
-<p>Returns a promise that resolves with the new path, and rejects if a path cannot be calculated</p>
-</span></span></div><div>
-<p>Generates a new path for an NPC and assigns the path to the NPC</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><span class="badge_Ba2I" style="color:#00CC67"><span class="badgeTooltip_cWXP">This item only works when running on the server.</span><span class="badgeToolTipTail_H9D_"><svg fill="#00CC67" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 90 90" role="img" aria-label="This item only works when running on the server."><polygon points="6.125,72.421 58.544,88.523 58.544,24.372 6.125,8.269 "></polygon><polygon points="79.818,15.77 79.868,15.755 29.615,1.453 10.328,6.318 60.102,21.609 "></polygon><path d="M61.643,78.738l22.232-6.582V17.801l-22.232,6.584V78.738z M73.811,69.257c-1.174,0-2.125-1.19-2.125-2.659  c0-1.468,0.951-2.658,2.125-2.658c1.172,0,2.123,1.19,2.123,2.658C75.934,68.066,74.982,69.257,73.811,69.257z M64.898,32.121  l16.336-4.41v7.117l-16.336,4.409V32.121z M64.898,41.292l16.336-4.41v7.116l-16.336,4.409V41.292z M64.898,50.463l16.336-4.411  v7.116l-16.336,4.411V50.463z"></path><polygon points="83.875,74.893 61.643,81.477 61.643,88.547 83.875,81.963 "></polygon></svg> <!-- -->Server</span></span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L222"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><div class="inset_uKQm"><div><code>Replica<!-- -->: </code><span><code>[</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/roblox-sparkles-docs/api/Types#Replica">Replica</a></code><code>]</code></span><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><span class="badge_Ba2I" style="color:#00CC67"><span class="badgeTooltip_cWXP">This item only works when running on the server.</span><span class="badgeToolTipTail_H9D_"><svg fill="#00CC67" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0px" y="0px" viewBox="0 0 90 90" role="img" aria-label="This item only works when running on the server."><polygon points="6.125,72.421 58.544,88.523 58.544,24.372 6.125,8.269 "></polygon><polygon points="79.818,15.77 79.868,15.755 29.615,1.453 10.328,6.318 60.102,21.609 "></polygon><path d="M61.643,78.738l22.232-6.582V17.801l-22.232,6.584V78.738z M73.811,69.257c-1.174,0-2.125-1.19-2.125-2.659  c0-1.468,0.951-2.658,2.125-2.658c1.172,0,2.123,1.19,2.123,2.658C75.934,68.066,74.982,69.257,73.811,69.257z M64.898,32.121  l16.336-4.41v7.117l-16.336,4.409V32.121z M64.898,41.292l16.336-4.41v7.116l-16.336,4.409V41.292z M64.898,50.463l16.336-4.411  v7.116l-16.336,4.411V50.463z"></path><polygon points="83.875,74.893 61.643,81.477 61.643,88.547 83.875,81.963 "></polygon></svg> <!-- -->Server</span></span><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L205"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><div class="inset_uKQm"><div><code>Replica<!-- -->: </code><span><code>[</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/roblox-sparkles-docs/api/Types#Replica">Replica</a></code><code>]</code></span><span class="inlineDescription_G7Er">-- <span>
 <p>The replica class to use for the NPC</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
 <p>Returns a promise that resolves with the NPC class if successfully generated, and rejects if not</p>
@@ -88,7 +80,13 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
 <p>Whether the animation is forcefully set from the server (And other animation requests should be ignored in the meantime)</p>
 </span></span></div></div><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Plays an animation for the NPC</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PlayAnimation"><code style="text-decoration:none">PlayAnimation</code><a href="#PlayAnimation" class="hash-link" aria-label="Direct link to PlayAnimation" title="Direct link to PlayAnimation">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L205"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->:</code><code class="green_DgR4">PlayAnimation</code><code>(</code><div class="inset_uKQm"><div><code>Animation<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="AssignWorldPath"><code style="text-decoration:none">AssignWorldPath</code><a href="#AssignWorldPath" class="hash-link" aria-label="Direct link to AssignWorldPath" title="Direct link to AssignWorldPath">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L121"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->:</code><code class="green_DgR4">AssignWorldPath</code><code>(</code><div class="inset_uKQm"><div><code>targetPoint<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The target point the NPC should navigate to</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">Promise</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">T</code><code class="op_lSLc">&gt;</code><span class="inlineDescription_G7Er">-- <span>
+<p>Returns a promise that resolves with the new path, and rejects if a path cannot be calculated</p>
+</span></span></div><div>
+<p>Generates a new path for an NPC and assigns the path to the NPC</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PlayAnimation"><code style="text-decoration:none">PlayAnimation</code><a href="#PlayAnimation" class="hash-link" aria-label="Direct link to PlayAnimation" title="Direct link to PlayAnimation">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/NPCService/NPC.lua#L188"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>NPC<!-- -->:</code><code class="green_DgR4">PlayAnimation</code><code>(</code><div class="inset_uKQm"><div><code>Animation<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>The animation to play</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>Returns whether the animation was started successfully or not</p>
@@ -229,41 +227,29 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
         {
             &quot;name&quot;: &quot;Destroy&quot;,
             &quot;desc&quot;: &quot;Destroys the NPC&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;self&quot;,
-                    &quot;desc&quot;: &quot;The NPC class to destroy&quot;,
-                    &quot;lua_type&quot;: &quot;[NPC]&quot;
-                }
-            ],
+            &quot;params&quot;: [],
             &quot;returns&quot;: [],
-            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;function_type&quot;: &quot;method&quot;,
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 84,
+                &quot;line&quot;: 69,
                 &quot;path&quot;: &quot;src/Server/Services/Game/NPCService/NPC.lua&quot;
             }
         },
         {
             &quot;name&quot;: &quot;_getNPCPosition&quot;,
             &quot;desc&quot;: &quot;Returns the approx. position of the NPC based on the current path + time along the path&quot;,
-            &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;self&quot;,
-                    &quot;desc&quot;: &quot;The NPC class&quot;,
-                    &quot;lua_type&quot;: &quot;[NPC]&quot;
-                }
-            ],
+            &quot;params&quot;: [],
             &quot;returns&quot;: [
                 {
                     &quot;desc&quot;: &quot;Returns the CFrame of the NPC&quot;,
                     &quot;lua_type&quot;: &quot;CFrame&quot;
                 }
             ],
-            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;function_type&quot;: &quot;method&quot;,
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 94,
+                &quot;line&quot;: 78,
                 &quot;path&quot;: &quot;src/Server/Services/Game/NPCService/NPC.lua&quot;
             }
         },
@@ -271,11 +257,6 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
             &quot;name&quot;: &quot;AssignWorldPath&quot;,
             &quot;desc&quot;: &quot;Generates a new path for an NPC and assigns the path to the NPC&quot;,
             &quot;params&quot;: [
-                {
-                    &quot;name&quot;: &quot;self&quot;,
-                    &quot;desc&quot;: &quot;The NPC class&quot;,
-                    &quot;lua_type&quot;: &quot;[NPC]&quot;
-                },
                 {
                     &quot;name&quot;: &quot;targetPoint&quot;,
                     &quot;desc&quot;: &quot;The target point the NPC should navigate to&quot;,
@@ -288,9 +269,9 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
                     &quot;lua_type&quot;: &quot;Promise&lt;T&gt;&quot;
                 }
             ],
-            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 138,
+                &quot;line&quot;: 121,
                 &quot;path&quot;: &quot;src/Server/Services/Game/NPCService/NPC.lua&quot;
             }
         },
@@ -312,7 +293,7 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 205,
+                &quot;line&quot;: 188,
                 &quot;path&quot;: &quot;src/Server/Services/Game/NPCService/NPC.lua&quot;
             }
         },
@@ -337,7 +318,7 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
                 &quot;Server&quot;
             ],
             &quot;source&quot;: {
-                &quot;line&quot;: 222,
+                &quot;line&quot;: 205,
                 &quot;path&quot;: &quot;src/Server/Services/Game/NPCService/NPC.lua&quot;
             }
         }
@@ -402,7 +383,7 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
             &quot;desc&quot;: &quot;How many times the [NPC] class (server) will attempt to compute a path before rejecting the promise created by [NPC.AssignWorldPath]&quot;,
             &quot;lua_type&quot;: &quot;number&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 60,
+                &quot;line&quot;: 46,
                 &quot;path&quot;: &quot;src/Server/Services/Game/NPCService/NPC.lua&quot;
             }
         },
@@ -411,7 +392,7 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
             &quot;desc&quot;: &quot;How long to wait before re-attempting to build a path after the last path build attempt failed&quot;,
             &quot;lua_type&quot;: &quot;number&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 67,
+                &quot;line&quot;: 53,
                 &quot;path&quot;: &quot;src/Server/Services/Game/NPCService/NPC.lua&quot;
             }
         },
@@ -420,7 +401,7 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
             &quot;desc&quot;: &quot;Key/pair table (Eg. {StoreFurniture=math.huge}) of pathfinding costs for all NPCs\nSee here for more info: https://create.roblox.com/docs/characters/pathfinding#working-with-regions&quot;,
             &quot;lua_type&quot;: &quot;table&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 75,
+                &quot;line&quot;: 61,
                 &quot;path&quot;: &quot;src/Server/Services/Game/NPCService/NPC.lua&quot;
             }
         }
@@ -435,8 +416,8 @@ NPCs have their paths played back via iterating and waiting the relevant travel 
         &quot;line&quot;: 15,
         &quot;path&quot;: &quot;src/Server/Services/Game/NPCService/NPC.lua&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#DISABLED_HUMANOID_STATES" class="table-of-contents__link toc-highlight">DISABLED_HUMANOID_STATES</a></li><li><a href="#NPC_PATH_COSTS" class="table-of-contents__link toc-highlight">NPC_PATH_COSTS</a></li><li><a href="#PATHFINDING_MAX_ATTEMPTS" class="table-of-contents__link toc-highlight">PATHFINDING_MAX_ATTEMPTS</a></li><li><a href="#PATHFINDING_REATTEMPT_DELAY" class="table-of-contents__link toc-highlight">PATHFINDING_REATTEMPT_DELAY</a></li><li><a href="#WING_DAMPING_RATIO" class="table-of-contents__link toc-highlight">WING_DAMPING_RATIO</a></li><li><a href="#WING_FLAP_CYCLE_TIME" class="table-of-contents__link toc-highlight">WING_FLAP_CYCLE_TIME</a></li><li><a href="#WING_FREQUENCY" class="table-of-contents__link toc-highlight">WING_FREQUENCY</a></li><li><a href="#WING_IDLE_SPEED_MULTIPLIER" class="table-of-contents__link toc-highlight">WING_IDLE_SPEED_MULTIPLIER</a></li><li><a href="#WING_MOVING_SPEED_MULTIPLIER" class="table-of-contents__link toc-highlight">WING_MOVING_SPEED_MULTIPLIER</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#_getNPCPosition" class="table-of-contents__link toc-highlight">:_getNPCPosition</a></li><li><a href="#PlayAnimation" class="table-of-contents__link toc-highlight">:PlayAnimation</a></li><li><a href="#PlayAnimation" class="table-of-contents__link toc-highlight">:PlayAnimation</a></li><li><a href="#AssignWorldPath" class="table-of-contents__link toc-highlight">.AssignWorldPath</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">examples</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://suitup.games/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Suit Up Games<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Suit Up Games. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/roblox-sparkles-docs/assets/js/runtime~main.b7421c4e.js"></script>
-<script src="/roblox-sparkles-docs/assets/js/main.01ccece9.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#DISABLED_HUMANOID_STATES" class="table-of-contents__link toc-highlight">DISABLED_HUMANOID_STATES</a></li><li><a href="#NPC_PATH_COSTS" class="table-of-contents__link toc-highlight">NPC_PATH_COSTS</a></li><li><a href="#PATHFINDING_MAX_ATTEMPTS" class="table-of-contents__link toc-highlight">PATHFINDING_MAX_ATTEMPTS</a></li><li><a href="#PATHFINDING_REATTEMPT_DELAY" class="table-of-contents__link toc-highlight">PATHFINDING_REATTEMPT_DELAY</a></li><li><a href="#WING_DAMPING_RATIO" class="table-of-contents__link toc-highlight">WING_DAMPING_RATIO</a></li><li><a href="#WING_FLAP_CYCLE_TIME" class="table-of-contents__link toc-highlight">WING_FLAP_CYCLE_TIME</a></li><li><a href="#WING_FREQUENCY" class="table-of-contents__link toc-highlight">WING_FREQUENCY</a></li><li><a href="#WING_IDLE_SPEED_MULTIPLIER" class="table-of-contents__link toc-highlight">WING_IDLE_SPEED_MULTIPLIER</a></li><li><a href="#WING_MOVING_SPEED_MULTIPLIER" class="table-of-contents__link toc-highlight">WING_MOVING_SPEED_MULTIPLIER</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#_getNPCPosition" class="table-of-contents__link toc-highlight">:_getNPCPosition</a></li><li><a href="#AssignWorldPath" class="table-of-contents__link toc-highlight">:AssignWorldPath</a></li><li><a href="#PlayAnimation" class="table-of-contents__link toc-highlight">:PlayAnimation</a></li><li><a href="#PlayAnimation" class="table-of-contents__link toc-highlight">:PlayAnimation</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">examples</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://suitup.games/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Suit Up Games<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Suit Up Games. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/roblox-sparkles-docs/assets/js/runtime~main.325a1901.js"></script>
+<script src="/roblox-sparkles-docs/assets/js/main.78c71684.js"></script>
 </body>
 </html>
