@@ -12,8 +12,8 @@ Date: 11/17/2023
 Project: roblox-sparkles
 
 Description: Customer server class"><link data-rh="true" rel="canonical" href="https://github.com/roblox-sparkles-docs/api/Customer"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/Customer" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/Customer" hreflang="x-default"><link rel="stylesheet" href="/roblox-sparkles-docs/assets/css/styles.19a5646f.css">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.b7421c4e.js" as="script">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.01ccece9.js" as="script">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.325a1901.js" as="script">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.78c71684.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -24,7 +24,7 @@ Description: Customer server class"><link data-rh="true" rel="canonical" href="h
   Project: roblox-sparkles
 </p>
 <p>Description: Customer server class</p>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/CustomerService/Customer.lua#L312"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Customer<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><div class="inset_uKQm"><div><code>Replication<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/CustomerService/Customer.lua#L308"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Customer<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><div class="inset_uKQm"><div><code>Replication<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>An array of players to replicate this customer to - if no table is provided (nil), then the customer will replicate to all clients</p>
 </span></span></div><div><code>Origin<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Vector3" target="_blank" rel="noopener noreferrer">Vector3<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The starting position of the customer NPC</p>
@@ -45,7 +45,7 @@ Description: Customer server class"><link data-rh="true" rel="canonical" href="h
   Replicates the state of an animation to the client and overrides any existing animations being played in that moment
   Animations are reset automatically when a new path is assigned
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetCurrentNPCPosition"><code style="text-decoration:none">GetCurrentNPCPosition</code><a href="#GetCurrentNPCPosition" class="hash-link" aria-label="Direct link to GetCurrentNPCPosition" title="Direct link to GetCurrentNPCPosition">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/CustomerService/Customer.lua#L300"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Customer<!-- -->:</code><code class="green_DgR4">GetCurrentNPCPosition</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetCurrentNPCPosition"><code style="text-decoration:none">GetCurrentNPCPosition</code><a href="#GetCurrentNPCPosition" class="hash-link" aria-label="Direct link to GetCurrentNPCPosition" title="Direct link to GetCurrentNPCPosition">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/CustomerService/Customer.lua#L296"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Customer<!-- -->:</code><code class="green_DgR4">GetCurrentNPCPosition</code><code>(</code><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame?<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
 <p>Returns the CFrame of the NPC if it is spawned in, and returns nil if not</p>
 </span></span></div><div>
 <p>Gets the approx. server-side position of the NPC (Based on waypoints/elapsed time)</p>
@@ -221,7 +221,7 @@ Description: Customer server class"><link data-rh="true" rel="canonical" href="h
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 276,
+                &quot;line&quot;: 272,
                 &quot;path&quot;: &quot;src/Server/Services/Game/CustomerService/Customer.lua&quot;
             }
         },
@@ -244,7 +244,7 @@ Description: Customer server class"><link data-rh="true" rel="canonical" href="h
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 292,
+                &quot;line&quot;: 288,
                 &quot;path&quot;: &quot;src/Server/Services/Game/CustomerService/Customer.lua&quot;
             }
         },
@@ -260,7 +260,7 @@ Description: Customer server class"><link data-rh="true" rel="canonical" href="h
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 300,
+                &quot;line&quot;: 296,
                 &quot;path&quot;: &quot;src/Server/Services/Game/CustomerService/Customer.lua&quot;
             }
         },
@@ -302,7 +302,7 @@ Description: Customer server class"><link data-rh="true" rel="canonical" href="h
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 312,
+                &quot;line&quot;: 308,
                 &quot;path&quot;: &quot;src/Server/Services/Game/CustomerService/Customer.lua&quot;
             }
         }
@@ -319,7 +319,7 @@ Description: Customer server class"><link data-rh="true" rel="canonical" href="h
         &quot;path&quot;: &quot;src/Server/Services/Game/CustomerService/Customer.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#GetCurrentNPCPosition" class="table-of-contents__link toc-highlight">:GetCurrentNPCPosition</a></li><li><a href="#PlayAnimation" class="table-of-contents__link toc-highlight">:PlayAnimation</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">examples</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://suitup.games/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Suit Up Games<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Suit Up Games. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/roblox-sparkles-docs/assets/js/runtime~main.b7421c4e.js"></script>
-<script src="/roblox-sparkles-docs/assets/js/main.01ccece9.js"></script>
+<script src="/roblox-sparkles-docs/assets/js/runtime~main.325a1901.js"></script>
+<script src="/roblox-sparkles-docs/assets/js/main.78c71684.js"></script>
 </body>
 </html>

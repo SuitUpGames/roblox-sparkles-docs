@@ -10,24 +10,24 @@ Project: roblox-sparkles
 Description: Furniture class gets all of the furniture modules from ReplicatedStorage &gt; Shared &gt; Assets &gt; Furniture, and sets their names as keys under this table (With all the metadata and also a reference to the model)
 
 ExampleItem = {
-        Name = &quot;Example&quot;,
-        Category = &quot;Shelf&quot;, -- Item category (e.g. &quot;Shelf&quot;, &quot;Decor&quot;, etc.)
-        ShelfType = &quot;Default&quot;, -- The type of shelf this counts as - nil for non-shelves
-        PurchasePrice = 10, -- How much currency a player needs to purchase one (1) of this item
-    }"><meta data-rh="true" property="og:description" content="Author: ArtemisTheDeer
+		Name = &quot;Example&quot;,
+		Category = &quot;Shelf&quot;, -- Item category (e.g. &quot;Shelf&quot;, &quot;Decor&quot;, etc.)
+		ShelfType = &quot;Default&quot;, -- The type of shelf this counts as - nil for non-shelves
+		PurchasePrice = 10, -- How much currency a player needs to purchase one (1) of this item
+	}"><meta data-rh="true" property="og:description" content="Author: ArtemisTheDeer
 Date: 1/9/24
 Project: roblox-sparkles
 
 Description: Furniture class gets all of the furniture modules from ReplicatedStorage &gt; Shared &gt; Assets &gt; Furniture, and sets their names as keys under this table (With all the metadata and also a reference to the model)
 
 ExampleItem = {
-        Name = &quot;Example&quot;,
-        Category = &quot;Shelf&quot;, -- Item category (e.g. &quot;Shelf&quot;, &quot;Decor&quot;, etc.)
-        ShelfType = &quot;Default&quot;, -- The type of shelf this counts as - nil for non-shelves
-        PurchasePrice = 10, -- How much currency a player needs to purchase one (1) of this item
-    }"><link data-rh="true" rel="canonical" href="https://github.com/roblox-sparkles-docs/api/Furniture"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/Furniture" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/Furniture" hreflang="x-default"><link rel="stylesheet" href="/roblox-sparkles-docs/assets/css/styles.19a5646f.css">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.b7421c4e.js" as="script">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.01ccece9.js" as="script">
+		Name = &quot;Example&quot;,
+		Category = &quot;Shelf&quot;, -- Item category (e.g. &quot;Shelf&quot;, &quot;Decor&quot;, etc.)
+		ShelfType = &quot;Default&quot;, -- The type of shelf this counts as - nil for non-shelves
+		PurchasePrice = 10, -- How much currency a player needs to purchase one (1) of this item
+	}"><link data-rh="true" rel="canonical" href="https://github.com/roblox-sparkles-docs/api/Furniture"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/Furniture" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/Furniture" hreflang="x-default"><link rel="stylesheet" href="/roblox-sparkles-docs/assets/css/styles.19a5646f.css">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.325a1901.js" as="script">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.78c71684.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -48,6 +48,8 @@ ExampleItem = {
 </p>
 </div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="properties">Properties<a href="#properties" class="hash-link" aria-label="Direct link to Properties" title="Direct link to Properties">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GRID_UNIT"><code style="text-decoration:none">GRID_UNIT</code><a href="#GRID_UNIT" class="hash-link" aria-label="Direct link to GRID_UNIT" title="Direct link to GRID_UNIT">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Modules/Data/Furniture.lua#L28"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Furniture<!-- -->.<!-- -->GRID_UNIT<!-- -->:<!-- --> </code> <code class="blue_P4bS">number</code></div><div>
 <p>Grid unit for snapping prop placement</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="FURNITURE_TAG"><code style="text-decoration:none">FURNITURE_TAG</code><a href="#FURNITURE_TAG" class="hash-link" aria-label="Direct link to FURNITURE_TAG" title="Direct link to FURNITURE_TAG">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Modules/Data/Furniture.lua#L35"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>Furniture<!-- -->.<!-- -->FURNITURE_TAG<!-- -->:<!-- --> </code> <code class="blue_P4bS">string</code></div><div>
+<p>String pattern used for identifying hitboxes assigned to a specific shop owner</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [],
     &quot;properties&quot;: [
@@ -59,17 +61,26 @@ ExampleItem = {
                 &quot;line&quot;: 28,
                 &quot;path&quot;: &quot;src/Shared/Modules/Data/Furniture.lua&quot;
             }
+        },
+        {
+            &quot;name&quot;: &quot;FURNITURE_TAG&quot;,
+            &quot;desc&quot;: &quot;String pattern used for identifying hitboxes assigned to a specific shop owner&quot;,
+            &quot;lua_type&quot;: &quot;string&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 35,
+                &quot;path&quot;: &quot;src/Shared/Modules/Data/Furniture.lua&quot;
+            }
         }
     ],
     &quot;types&quot;: [],
     &quot;name&quot;: &quot;Furniture&quot;,
-    &quot;desc&quot;: &quot;Author: ArtemisTheDeer\nDate: 1/9/24\nProject: roblox-sparkles\n\nDescription: Furniture class gets all of the furniture modules from ReplicatedStorage &gt; Shared &gt; Assets &gt; Furniture, and sets their names as keys under this table (With all the metadata and also a reference to the model)\n\nExampleItem = {\n        Name = \&quot;Example\&quot;,\n        Category = \&quot;Shelf\&quot;, -- Item category (e.g. \&quot;Shelf\&quot;, \&quot;Decor\&quot;, etc.)\n        ShelfType = \&quot;Default\&quot;, -- The type of shelf this counts as - nil for non-shelves\n        PurchasePrice = 10, -- How much currency a player needs to purchase one (1) of this item\n    }&quot;,
+    &quot;desc&quot;: &quot;Author: ArtemisTheDeer\nDate: 1/9/24\nProject: roblox-sparkles\n\nDescription: Furniture class gets all of the furniture modules from ReplicatedStorage &gt; Shared &gt; Assets &gt; Furniture, and sets their names as keys under this table (With all the metadata and also a reference to the model)\n\nExampleItem = {\n\t\tName = \&quot;Example\&quot;,\n\t\tCategory = \&quot;Shelf\&quot;, -- Item category (e.g. \&quot;Shelf\&quot;, \&quot;Decor\&quot;, etc.)\n\t\tShelfType = \&quot;Default\&quot;, -- The type of shelf this counts as - nil for non-shelves\n\t\tPurchasePrice = 10, -- How much currency a player needs to purchase one (1) of this item\n\t}&quot;,
     &quot;source&quot;: {
         &quot;line&quot;: 17,
         &quot;path&quot;: &quot;src/Shared/Modules/Data/Furniture.lua&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#GRID_UNIT" class="table-of-contents__link toc-highlight">GRID_UNIT</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">examples</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://suitup.games/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Suit Up Games<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Suit Up Games. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/roblox-sparkles-docs/assets/js/runtime~main.b7421c4e.js"></script>
-<script src="/roblox-sparkles-docs/assets/js/main.01ccece9.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#FURNITURE_TAG" class="table-of-contents__link toc-highlight">FURNITURE_TAG</a></li><li><a href="#GRID_UNIT" class="table-of-contents__link toc-highlight">GRID_UNIT</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">examples</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://suitup.games/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Suit Up Games<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Suit Up Games. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/roblox-sparkles-docs/assets/js/runtime~main.325a1901.js"></script>
+<script src="/roblox-sparkles-docs/assets/js/main.78c71684.js"></script>
 </body>
 </html>
