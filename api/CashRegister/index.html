@@ -7,13 +7,89 @@
 Date: 01/09/2024
 Project: roblox-sparkles
 
-Description: Furniture class"><meta data-rh="true" property="og:description" content="Author: ArtemisTheDeer
+Description: Furniture class
+
+Under the furniture class, there is a signal (PropEnchantmentToggled) - you can connect to it for determining when a prop&#x27;s enchantment was enabled/disabled
+
+Args provided for the callback function are:
+	
+Enchantment: string - The enchantment being enabled/disabled
+
+isEnabled: boolean - If the enchantment is enabled/disabled
+
+To add enchantments:
+
+Enchantments go under the optional &#x27;Enchantments&#x27; table of Metadata
+
+Each enchantment table key should have the following:
+
+Key: string = {
+				Name: string= &quot;MyEnchantment&quot;, -- Name of the enchantment (What text should be displayed to players)
+				Description: string = &quot;Automatically check out customers who approach the cash register&quot;, -- Description of the enchantment (What text should be displayed to players)
+				Price: number = 100, -- How much one quantity of this enchantment costs (Players can buy multiple quantities of the enchantment and equip/unequip across the same type of prop w/their store)
+				PurchaseCurrency: string = &quot;Credits&quot;, -- What currency to bill players to purchase one copy of this enchantment
+				_function: string = &quot;automaticCheckout&quot;, -- What internal function to fire when the enchantment is toggled on/off (Client/server)
+			},
+
+		With the _function string, here is how you add an enchantment function to the prop
+
+			The function should be defined under the prop class (Eg. CashRegister) as follows:
+
+			function MyProp._enchantmentFunction(self: ANY_TABLE, doEnable: boolean): boolean | string
+
+			Where:
+
+			- _function key (Under the enchantment table) would be &quot;enchantmentFunction&quot;
+
+			- MyProp would have a function under it called ._enchantmentFunction
+
+			This function will be called server and client-side (With the self argument being the server/client prop class, respectively, and doEnable being whether that enchantment is enabled/disabled)
+
+			The function should return a boolean if the behavior is successfully set, and a string (The error reason) if it is unable to be successfully ran"><meta data-rh="true" property="og:description" content="Author: ArtemisTheDeer
 Date: 01/09/2024
 Project: roblox-sparkles
 
-Description: Furniture class"><link data-rh="true" rel="canonical" href="https://github.com/roblox-sparkles-docs/api/CashRegister"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/CashRegister" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/CashRegister" hreflang="x-default"><link rel="stylesheet" href="/roblox-sparkles-docs/assets/css/styles.19a5646f.css">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.681435dd.js" as="script">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.0a6d202e.js" as="script">
+Description: Furniture class
+
+Under the furniture class, there is a signal (PropEnchantmentToggled) - you can connect to it for determining when a prop&#x27;s enchantment was enabled/disabled
+
+Args provided for the callback function are:
+	
+Enchantment: string - The enchantment being enabled/disabled
+
+isEnabled: boolean - If the enchantment is enabled/disabled
+
+To add enchantments:
+
+Enchantments go under the optional &#x27;Enchantments&#x27; table of Metadata
+
+Each enchantment table key should have the following:
+
+Key: string = {
+				Name: string= &quot;MyEnchantment&quot;, -- Name of the enchantment (What text should be displayed to players)
+				Description: string = &quot;Automatically check out customers who approach the cash register&quot;, -- Description of the enchantment (What text should be displayed to players)
+				Price: number = 100, -- How much one quantity of this enchantment costs (Players can buy multiple quantities of the enchantment and equip/unequip across the same type of prop w/their store)
+				PurchaseCurrency: string = &quot;Credits&quot;, -- What currency to bill players to purchase one copy of this enchantment
+				_function: string = &quot;automaticCheckout&quot;, -- What internal function to fire when the enchantment is toggled on/off (Client/server)
+			},
+
+		With the _function string, here is how you add an enchantment function to the prop
+
+			The function should be defined under the prop class (Eg. CashRegister) as follows:
+
+			function MyProp._enchantmentFunction(self: ANY_TABLE, doEnable: boolean): boolean | string
+
+			Where:
+
+			- _function key (Under the enchantment table) would be &quot;enchantmentFunction&quot;
+
+			- MyProp would have a function under it called ._enchantmentFunction
+
+			This function will be called server and client-side (With the self argument being the server/client prop class, respectively, and doEnable being whether that enchantment is enabled/disabled)
+
+			The function should return a boolean if the behavior is successfully set, and a string (The error reason) if it is unable to be successfully ran"><link data-rh="true" rel="canonical" href="https://github.com/roblox-sparkles-docs/api/CashRegister"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/CashRegister" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/CashRegister" hreflang="x-default"><link rel="stylesheet" href="/roblox-sparkles-docs/assets/css/styles.19a5646f.css">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.ea860d2b.js" as="script">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.e982d0bd.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -24,7 +100,47 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
   Project: roblox-sparkles
 </p>
 <p>Description: Furniture class</p>
-</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="_activatedRegister"><code style="text-decoration:none">_activatedRegister</code><a href="#_activatedRegister" class="hash-link" aria-label="Direct link to _activatedRegister" title="Direct link to _activatedRegister">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L216"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->.</code><code class="green_DgR4">_activatedRegister</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>Under the furniture class, there is a signal (PropEnchantmentToggled) - you can connect to it for determining when a prop's enchantment was enabled/disabled</p>
+<p>Args provided for the callback function are:</p>
+<p>Enchantment: string - The enchantment being enabled/disabled</p>
+<p>isEnabled: boolean - If the enchantment is enabled/disabled</p>
+<p>To add enchantments:</p>
+<p>Enchantments go under the optional 'Enchantments' table of Metadata</p>
+<p>Each enchantment table key should have the following:</p>
+<p>
+  Key: string = {
+  Name: string= "MyEnchantment", -- Name of the enchantment (What text should be displayed to players)
+  Description: string = "Automatically check out customers who approach the cash register", -- Description of the enchantment (What text should be displayed to players)
+  Price: number = 100, -- How much one quantity of this enchantment costs (Players can buy multiple quantities of the enchantment and equip/unequip across the same type of prop w/their store)
+  PurchaseCurrency: string = "Credits", -- What currency to bill players to purchase one copy of this enchantment
+  _function: string = "automaticCheckout", -- What internal function to fire when the enchantment is toggled on/off (Client/server)
+  },
+</p>
+<pre><code>	With the _function string, here is how you add an enchantment function to the prop
+
+		The function should be defined under the prop class (Eg. CashRegister) as follows:
+
+		function MyProp._enchantmentFunction(self: ANY_TABLE, doEnable: boolean): boolean | string
+
+		Where:
+
+		- _function key (Under the enchantment table) would be "enchantmentFunction"
+
+		- MyProp would have a function under it called ._enchantmentFunction
+
+		This function will be called server and client-side (With the self argument being the server/client prop class, respectively, and doEnable being whether that enchantment is enabled/disabled)
+
+		The function should return a boolean if the behavior is successfully set, and a string (The error reason) if it is unable to be successfully ran
+</code></pre>
+</div></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="_automaticCheckout"><code style="text-decoration:none">_automaticCheckout</code><a href="#_automaticCheckout" class="hash-link" aria-label="Direct link to _automaticCheckout" title="Direct link to _automaticCheckout">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L108"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->.</code><code class="green_DgR4">_automaticCheckout</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The prop class</p>
+</span></span></div><div><code>doEnable<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Should this enchantment be enabled?</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><code class="op_lSLc"> | </code><code class="blue_P4bS">string</code></div><div>
+<p>Automatic checkout enchantment (Shop owner does not need to interact w/this cash register to check out)</p>
+<p>This function toggles the enhancement's functionality (Whether it's enabled or not)</p>
+<p>(This function does not presently change the behavior of the prop, and is for demonstration use)</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="_activatedRegister"><code style="text-decoration:none">_activatedRegister</code><a href="#_activatedRegister" class="hash-link" aria-label="Direct link to _activatedRegister" title="Direct link to _activatedRegister">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L387"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->.</code><code class="green_DgR4">_activatedRegister</code><code>(</code><div class="inset_uKQm"><div><code>self<!-- -->: </code><code class="blue_P4bS">table</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The respective prop class</p>
 </span></span></div><div><code>Player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>The player invoking the remote</p>
@@ -32,13 +148,25 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
 <p>Variadic args</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">nil</code></div><div>
 <p>A test function to see if the bridge between the client/server works</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L237"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><div class="inset_uKQm"><div><code>propReplica<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/roblox-sparkles-docs/api/Types#Replica">Replica</a></code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="new"><code style="text-decoration:none">new</code><a href="#new" class="hash-link" aria-label="Direct link to new" title="Direct link to new">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L408"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->.</code><code class="green_DgR4">new</code><code>(</code><div class="inset_uKQm"><div><code>propReplica<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/roblox-sparkles-docs/api/Types#Replica">Replica</a></code><span class="inlineDescription_G7Er">-- <span>
 <p>Replica class of the furniture</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
 <p>Returns a new furniture class</p>
 </span></span></div><div>
 <p>Creates a new furniture class</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PivotTo"><code style="text-decoration:none">PivotTo</code><a href="#PivotTo" class="hash-link" aria-label="Direct link to PivotTo" title="Direct link to PivotTo">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L61"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->:</code><code class="green_DgR4">PivotTo</code><code>(</code><div class="inset_uKQm"><div><code>targetCFrame<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ToggleEnchantment"><code style="text-decoration:none">ToggleEnchantment</code><a href="#ToggleEnchantment" class="hash-link" aria-label="Direct link to ToggleEnchantment" title="Direct link to ToggleEnchantment">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L137"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->:</code><code class="green_DgR4">ToggleEnchantment</code><code>(</code><div class="inset_uKQm"><div><code>enchantmentKey<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+<p>The enchantment to enable/disable</p>
+</span></span></div><div><code>doEnable<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Should the enchantment be enabled?</p>
+</span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><code class="op_lSLc"> | </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
+<p>Returns a boolean if the enchantment is successfully set, and a string (Error) if not</p>
+</span></span></div><div>
+<p>Toggles a specific enchantment's behavior</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetEnabledEnchantments"><code style="text-decoration:none">GetEnabledEnchantments</code><a href="#GetEnabledEnchantments" class="hash-link" aria-label="Direct link to GetEnabledEnchantments" title="Direct link to GetEnabledEnchantments">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L161"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->:</code><code class="green_DgR4">GetEnabledEnchantments</code><code>(</code><code>) → </code><code class="blue_P4bS">table</code><span class="inlineDescription_G7Er">-- <span>
+<p>Returns an array (strings) of equipped enchantments</p>
+</span></span></div><div>
+<p>Get an array of enchantments that are presently equipped to this prop</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PivotTo"><code style="text-decoration:none">PivotTo</code><a href="#PivotTo" class="hash-link" aria-label="Direct link to PivotTo" title="Direct link to PivotTo">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L190"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->:</code><code class="green_DgR4">PivotTo</code><code>(</code><div class="inset_uKQm"><div><code>targetCFrame<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/CFrame" target="_blank" rel="noopener noreferrer">CFrame<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
 <p>The new CFrame for the model/hitbox</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
 <p>Returns true if the prop's position is successfully adjusted, and false if not</p>
@@ -48,16 +176,114 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
   If called from the client, the 3D model will pivot to the new location
   If called from the server, the hitbox will pivot to the new location
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Initiate"><code style="text-decoration:none">Initiate</code><a href="#Initiate" class="hash-link" aria-label="Direct link to Initiate" title="Direct link to Initiate">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L153"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->:</code><code class="green_DgR4">Initiate</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="blue_P4bS">any</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Initiate"><code style="text-decoration:none">Initiate</code><a href="#Initiate" class="hash-link" aria-label="Direct link to Initiate" title="Direct link to Initiate">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L319"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->:</code><code class="green_DgR4">Initiate</code><code>(</code><div class="inset_uKQm"><div><code>...<!-- -->: </code><code class="blue_P4bS">any</code><span class="inlineDescription_G7Er">-- <span>
 <p>TBD optional parameters</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Model" target="_blank" rel="noopener noreferrer">Model<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="op_lSLc"> | </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/BasePart" target="_blank" rel="noopener noreferrer">BasePart<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
 <p>Returns the furniture model if the code is being run client-side, and returns the bounding box BasePart if run server-side</p>
 </span></span></div><div>
 <p>Initiates furniture behavior</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a href="#Destroy" class="hash-link" aria-label="Direct link to Destroy" title="Direct link to Destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L223"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->:</code><code class="green_DgR4">Destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="Destroy"><code style="text-decoration:none">Destroy</code><a href="#Destroy" class="hash-link" aria-label="Direct link to Destroy" title="Direct link to Destroy">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Shared/Assets/Furniture/CashRegister/init.lua#L394"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>CashRegister<!-- -->:</code><code class="green_DgR4">Destroy</code><code>(</code><code>) → </code><code>(</code><code>)</code></div><div>
 <p>Destroys the furniture class</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
+        {
+            &quot;name&quot;: &quot;_automaticCheckout&quot;,
+            &quot;desc&quot;: &quot;Automatic checkout enchantment (Shop owner does not need to interact w/this cash register to check out)\n\nThis function toggles the enhancement&#x27;s functionality (Whether it&#x27;s enabled or not)\n\n(This function does not presently change the behavior of the prop, and is for demonstration use)&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;self&quot;,
+                    &quot;desc&quot;: &quot;The prop class&quot;,
+                    &quot;lua_type&quot;: &quot;table&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;doEnable&quot;,
+                    &quot;desc&quot;: &quot;Should this enchantment be enabled?&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;boolean | string\r\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 108,
+                &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;_toggleEnchantment&quot;,
+            &quot;desc&quot;: &quot;Toggles a specific enchantment&#x27;s behavior (Private internal method)&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;enchantmentKey&quot;,
+                    &quot;desc&quot;: &quot;The enchantment to enable/disable&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;doEnable&quot;,
+                    &quot;desc&quot;: &quot;Should the enchantment be enabled?&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Returns a boolean if the enchantment is successfully set, and a string (Error) if not&quot;,
+                    &quot;lua_type&quot;: &quot;boolean | string&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;private&quot;: true,
+            &quot;source&quot;: {
+                &quot;line&quot;: 125,
+                &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;ToggleEnchantment&quot;,
+            &quot;desc&quot;: &quot;Toggles a specific enchantment&#x27;s behavior&quot;,
+            &quot;params&quot;: [
+                {
+                    &quot;name&quot;: &quot;enchantmentKey&quot;,
+                    &quot;desc&quot;: &quot;The enchantment to enable/disable&quot;,
+                    &quot;lua_type&quot;: &quot;string&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;doEnable&quot;,
+                    &quot;desc&quot;: &quot;Should the enchantment be enabled?&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;
+                }
+            ],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Returns a boolean if the enchantment is successfully set, and a string (Error) if not&quot;,
+                    &quot;lua_type&quot;: &quot;boolean | string&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 137,
+                &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GetEnabledEnchantments&quot;,
+            &quot;desc&quot;: &quot;Get an array of enchantments that are presently equipped to this prop&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;Returns an array (strings) of equipped enchantments&quot;,
+                    &quot;lua_type&quot;: &quot;table&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;method&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 161,
+                &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
+            }
+        },
         {
             &quot;name&quot;: &quot;PivotTo&quot;,
             &quot;desc&quot;: &quot;Moves the furniture model to a new location\n\nIf called from the client, the 3D model will pivot to the new location\nIf called from the server, the hitbox will pivot to the new location&quot;,
@@ -76,7 +302,7 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 61,
+                &quot;line&quot;: 190,
                 &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
             }
         },
@@ -102,7 +328,7 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
             ],
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 87,
+                &quot;line&quot;: 216,
                 &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
             }
         },
@@ -128,7 +354,7 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
             ],
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 113,
+                &quot;line&quot;: 255,
                 &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
             }
         },
@@ -150,7 +376,7 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 153,
+                &quot;line&quot;: 319,
                 &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
             }
         },
@@ -165,7 +391,7 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
             ],
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 168,
+                &quot;line&quot;: 334,
                 &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
             }
         },
@@ -180,7 +406,7 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
             ],
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 178,
+                &quot;line&quot;: 344,
                 &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
             }
         },
@@ -216,7 +442,7 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
             ],
             &quot;private&quot;: true,
             &quot;source&quot;: {
-                &quot;line&quot;: 192,
+                &quot;line&quot;: 358,
                 &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
             }
         },
@@ -248,7 +474,7 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 216,
+                &quot;line&quot;: 387,
                 &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
             }
         },
@@ -259,7 +485,7 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
             &quot;returns&quot;: [],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 223,
+                &quot;line&quot;: 394,
                 &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
             }
         },
@@ -281,7 +507,7 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
             ],
             &quot;function_type&quot;: &quot;static&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 237,
+                &quot;line&quot;: 408,
                 &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
             }
         }
@@ -289,14 +515,14 @@ Description: Furniture class"><link data-rh="true" rel="canonical" href="https:/
     &quot;properties&quot;: [],
     &quot;types&quot;: [],
     &quot;name&quot;: &quot;CashRegister&quot;,
-    &quot;desc&quot;: &quot;Author: ArtemisTheDeer\nDate: 01/09/2024\nProject: roblox-sparkles\n\nDescription: Furniture class&quot;,
+    &quot;desc&quot;: &quot;Author: ArtemisTheDeer\nDate: 01/09/2024\nProject: roblox-sparkles\n\nDescription: Furniture class\n\nUnder the furniture class, there is a signal (PropEnchantmentToggled) - you can connect to it for determining when a prop&#x27;s enchantment was enabled/disabled\n\nArgs provided for the callback function are:\n\t\nEnchantment: string - The enchantment being enabled/disabled\n\nisEnabled: boolean - If the enchantment is enabled/disabled\n\nTo add enchantments:\n\nEnchantments go under the optional &#x27;Enchantments&#x27; table of Metadata\n\nEach enchantment table key should have the following:\n\nKey: string = {\n\t\t\t\tName: string= \&quot;MyEnchantment\&quot;, -- Name of the enchantment (What text should be displayed to players)\n\t\t\t\tDescription: string = \&quot;Automatically check out customers who approach the cash register\&quot;, -- Description of the enchantment (What text should be displayed to players)\n\t\t\t\tPrice: number = 100, -- How much one quantity of this enchantment costs (Players can buy multiple quantities of the enchantment and equip/unequip across the same type of prop w/their store)\n\t\t\t\tPurchaseCurrency: string = \&quot;Credits\&quot;, -- What currency to bill players to purchase one copy of this enchantment\n\t\t\t\t_function: string = \&quot;automaticCheckout\&quot;, -- What internal function to fire when the enchantment is toggled on/off (Client/server)\n\t\t\t},\n\n\t\tWith the _function string, here is how you add an enchantment function to the prop\n\n\t\t\tThe function should be defined under the prop class (Eg. CashRegister) as follows:\n\n\t\t\tfunction MyProp._enchantmentFunction(self: ANY_TABLE, doEnable: boolean): boolean | string\n\n\t\t\tWhere:\n\n\t\t\t- _function key (Under the enchantment table) would be \&quot;enchantmentFunction\&quot;\n\n\t\t\t- MyProp would have a function under it called ._enchantmentFunction\n\n\t\t\tThis function will be called server and client-side (With the self argument being the server/client prop class, respectively, and doEnable being whether that enchantment is enabled/disabled)\n\n\t\t\tThe function should return a boolean if the behavior is successfully set, and a string (The error reason) if it is unable to be successfully ran&quot;,
     &quot;private&quot;: true,
     &quot;source&quot;: {
-        &quot;line&quot;: 11,
+        &quot;line&quot;: 49,
         &quot;path&quot;: &quot;src/Shared/Assets/Furniture/CashRegister/init.lua&quot;
     }
-}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#Initiate" class="table-of-contents__link toc-highlight">:Initiate</a></li><li><a href="#PivotTo" class="table-of-contents__link toc-highlight">:PivotTo</a></li><li><a href="#_activatedRegister" class="table-of-contents__link toc-highlight">._activatedRegister</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">examples</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://suitup.games/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Suit Up Games<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Suit Up Games. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/roblox-sparkles-docs/assets/js/runtime~main.681435dd.js"></script>
-<script src="/roblox-sparkles-docs/assets/js/main.0a6d202e.js"></script>
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#Destroy" class="table-of-contents__link toc-highlight">:Destroy</a></li><li><a href="#GetEnabledEnchantments" class="table-of-contents__link toc-highlight">:GetEnabledEnchantments</a></li><li><a href="#Initiate" class="table-of-contents__link toc-highlight">:Initiate</a></li><li><a href="#PivotTo" class="table-of-contents__link toc-highlight">:PivotTo</a></li><li><a href="#ToggleEnchantment" class="table-of-contents__link toc-highlight">:ToggleEnchantment</a></li><li><a href="#_activatedRegister" class="table-of-contents__link toc-highlight">._activatedRegister</a></li><li><a href="#_automaticCheckout" class="table-of-contents__link toc-highlight">._automaticCheckout</a></li><li><a href="#new" class="table-of-contents__link toc-highlight">.new</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">examples</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://suitup.games/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Suit Up Games<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Suit Up Games. Built with Moonwave and Docusaurus</div></div></div></footer></div>
+<script src="/roblox-sparkles-docs/assets/js/runtime~main.ea860d2b.js"></script>
+<script src="/roblox-sparkles-docs/assets/js/main.e982d0bd.js"></script>
 </body>
 </html>
