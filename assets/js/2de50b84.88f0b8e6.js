@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[1070],{65090:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"Items","desc":"Author: ArtemisTheDeer\\nDate: 11/28/2023\\nProject: roblox-sparkles\\n\\nDescription: Key/pair table of all available items in-game","source":{"line":10,"path":"src/Shared/Modules/Data/Items.lua"}}')}}]);
