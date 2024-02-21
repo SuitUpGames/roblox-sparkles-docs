@@ -10,8 +10,8 @@ Handles the central store"><meta data-rh="true" property="og:description" conten
 Project: roblox-sparkles
 
 Handles the central store"><link data-rh="true" rel="canonical" href="https://github.com/roblox-sparkles-docs/api/ShopService"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/ShopService" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/roblox-sparkles-docs/api/ShopService" hreflang="x-default"><link rel="stylesheet" href="/roblox-sparkles-docs/assets/css/styles.19a5646f.css">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.8949f92b.js" as="script">
-<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.2c41509f.js" as="script">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/runtime~main.6d178400.js" as="script">
+<link rel="preload" href="/roblox-sparkles-docs/assets/js/main.0ebfa688.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -41,7 +41,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
 <p>Is the item enchanted?</p>
 </span></span></div></div><code>) → </code><code class="blue_P4bS">nil</code></div><div>
 <p>Add to purchase history log for player.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PurchaseItem"><code style="text-decoration:none">PurchaseItem</code><a href="#PurchaseItem" class="hash-link" aria-label="Direct link to PurchaseItem" title="Direct link to PurchaseItem">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L140"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">PurchaseItem</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PurchaseItem"><code style="text-decoration:none">PurchaseItem</code><a href="#PurchaseItem" class="hash-link" aria-label="Direct link to PurchaseItem" title="Direct link to PurchaseItem">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L155"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">PurchaseItem</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>player purchasing item</p>
 </span></span></div><div><code>itemName<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>name of item</p>
@@ -54,7 +54,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
   Purchase specified amount of item
   Currently does not check whether or not the player has the item unlocked
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="UseEnchantment"><code style="text-decoration:none">UseEnchantment</code><a href="#UseEnchantment" class="hash-link" aria-label="Direct link to UseEnchantment" title="Direct link to UseEnchantment">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L184"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">UseEnchantment</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="UseEnchantment"><code style="text-decoration:none">UseEnchantment</code><a href="#UseEnchantment" class="hash-link" aria-label="Direct link to UseEnchantment" title="Direct link to UseEnchantment">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L199"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">UseEnchantment</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>player purchasing item</p>
 </span></span></div><div><code>itemName<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>name of item</p>
@@ -62,7 +62,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
 <p>promise that resolves with the new amount of the item the player owns if purchased successfully, and rejects otherwise</p>
 </span></span></div><div>
 <p>Handles player using an enchantment on object.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PurchaseAccess"><code style="text-decoration:none">PurchaseAccess</code><a href="#PurchaseAccess" class="hash-link" aria-label="Direct link to PurchaseAccess" title="Direct link to PurchaseAccess">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L228"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">PurchaseAccess</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="PurchaseAccess"><code style="text-decoration:none">PurchaseAccess</code><a href="#PurchaseAccess" class="hash-link" aria-label="Direct link to PurchaseAccess" title="Direct link to PurchaseAccess">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L243"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">PurchaseAccess</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>player purchasing item</p>
 </span></span></div><div><code>itemName<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>name of item</p>
@@ -70,7 +70,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
 <p>promise that resolves with the new amount of the item the player owns if purchased successfully, and rejects otherwise</p>
 </span></span></div><div>
 <p>Handles player buying access to an object.</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetAmount"><code style="text-decoration:none">GetAmount</code><a href="#GetAmount" class="hash-link" aria-label="Direct link to GetAmount" title="Direct link to GetAmount">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L305"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">GetAmount</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="GetAmount"><code style="text-decoration:none">GetAmount</code><a href="#GetAmount" class="hash-link" aria-label="Direct link to GetAmount" title="Direct link to GetAmount">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L320"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">GetAmount</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>player to fetch information for</p>
 </span></span></div><div><code>itemName<!-- -->: </code><code class="blue_P4bS">string</code><span class="inlineDescription_G7Er">-- <span>
 <p>name of item</p>
@@ -78,7 +78,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
 <p>promise that resolves with the amount of the item the player owns, rejects if the item is not unlocked yet</p>
 </span></span></div><div>
 <p>Get amount of a specified item in a player's product inventory</p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ChangeAmount"><code style="text-decoration:none">ChangeAmount</code><a href="#ChangeAmount" class="hash-link" aria-label="Direct link to ChangeAmount" title="Direct link to ChangeAmount">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L333"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">ChangeAmount</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="ChangeAmount"><code style="text-decoration:none">ChangeAmount</code><a href="#ChangeAmount" class="hash-link" aria-label="Direct link to ChangeAmount" title="Direct link to ChangeAmount">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L348"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">ChangeAmount</code><code>(</code><div class="inset_uKQm"><div><code>player<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Player" target="_blank" rel="noopener noreferrer">Player<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>player to change for</p>
 </span></span></div><div><code>itemName<!-- -->: </code><code class="blue_P4bS">string</code><code>,</code><span class="inlineDescription_G7Er">-- <span>
 <p>name of item</p>
@@ -93,7 +93,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
   Change amount of a specified item in a player's product inventory
   Currently automatically unlocks the item for free if not already unlocked
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="KnitStart"><code style="text-decoration:none">KnitStart</code><a href="#KnitStart" class="hash-link" aria-label="Direct link to KnitStart" title="Direct link to KnitStart">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L370"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">KnitStart</code><code>(</code><code>) → </code><code class="blue_P4bS">nil</code></div><div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="KnitStart"><code style="text-decoration:none">KnitStart</code><a href="#KnitStart" class="hash-link" aria-label="Direct link to KnitStart" title="Direct link to KnitStart">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/suit-up-repos/roblox-sparkles-docs/blob/main/src/Server/Services/Game/ShopService.lua#L385"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ShopService<!-- -->:</code><code class="green_DgR4">KnitStart</code><code>(</code><code>) → </code><code class="blue_P4bS">nil</code></div><div>
 <p>Start ShopService</p>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
@@ -184,7 +184,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 140,
+                &quot;line&quot;: 155,
                 &quot;path&quot;: &quot;src/Server/Services/Game/ShopService.lua&quot;
             }
         },
@@ -211,7 +211,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 184,
+                &quot;line&quot;: 199,
                 &quot;path&quot;: &quot;src/Server/Services/Game/ShopService.lua&quot;
             }
         },
@@ -238,7 +238,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 228,
+                &quot;line&quot;: 243,
                 &quot;path&quot;: &quot;src/Server/Services/Game/ShopService.lua&quot;
             }
         },
@@ -265,7 +265,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 305,
+                &quot;line&quot;: 320,
                 &quot;path&quot;: &quot;src/Server/Services/Game/ShopService.lua&quot;
             }
         },
@@ -302,7 +302,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 333,
+                &quot;line&quot;: 348,
                 &quot;path&quot;: &quot;src/Server/Services/Game/ShopService.lua&quot;
             }
         },
@@ -318,7 +318,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
             ],
             &quot;function_type&quot;: &quot;method&quot;,
             &quot;source&quot;: {
-                &quot;line&quot;: 370,
+                &quot;line&quot;: 385,
                 &quot;path&quot;: &quot;src/Server/Services/Game/ShopService.lua&quot;
             }
         }
@@ -354,7 +354,7 @@ Handles the central store"><link data-rh="true" rel="canonical" href="https://gi
         &quot;path&quot;: &quot;src/Server/Services/Game/ShopService.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a><ul><li><a href="#MAX_PURCHASE_HISTORY_NUMBER" class="table-of-contents__link toc-highlight">MAX_PURCHASE_HISTORY_NUMBER</a></li><li><a href="#UNLOCK_COST_MULTIPLIER" class="table-of-contents__link toc-highlight">UNLOCK_COST_MULTIPLIER</a></li></ul></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#AddToPurchaseHistory" class="table-of-contents__link toc-highlight">:AddToPurchaseHistory</a></li><li><a href="#ChangeAmount" class="table-of-contents__link toc-highlight">:ChangeAmount</a></li><li><a href="#GetAmount" class="table-of-contents__link toc-highlight">:GetAmount</a></li><li><a href="#KnitStart" class="table-of-contents__link toc-highlight">:KnitStart</a></li><li><a href="#PurchaseAccess" class="table-of-contents__link toc-highlight">:PurchaseAccess</a></li><li><a href="#PurchaseItem" class="table-of-contents__link toc-highlight">:PurchaseItem</a></li><li><a href="#UnlockItem" class="table-of-contents__link toc-highlight">:UnlockItem</a></li><li><a href="#UseEnchantment" class="table-of-contents__link toc-highlight">:UseEnchantment</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">examples</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://suitup.games/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Suit Up Games<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 Suit Up Games. Built with Moonwave and Docusaurus</div></div></div></footer></div>
-<script src="/roblox-sparkles-docs/assets/js/runtime~main.8949f92b.js"></script>
-<script src="/roblox-sparkles-docs/assets/js/main.2c41509f.js"></script>
+<script src="/roblox-sparkles-docs/assets/js/runtime~main.6d178400.js"></script>
+<script src="/roblox-sparkles-docs/assets/js/main.0ebfa688.js"></script>
 </body>
 </html>
